@@ -20,7 +20,6 @@
 
     NSURLRequest * urlRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.amazon.com"]];
     
-    self.webView = [[UIWebView alloc] initWithFrame:self.view.frame];
     self.webView.layer.cornerRadius = 0;
     self.webView.userInteractionEnabled = YES;
     self.webView.multipleTouchEnabled = YES;
@@ -28,8 +27,6 @@
     self.webView.scrollView.scrollEnabled = NO;
     self.webView.scrollView.bounces = NO;
     [self.webView loadRequest:urlRequest];
-    
-    [self.view addSubview:self.webView];
 }
 
 @end
